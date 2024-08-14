@@ -14,12 +14,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        text: "#e8f3f1",
-        background: "#0a1513",
-        primary: "#9fd6ca",
-        secondary: "#2e7869",
-        accent: "#63c9b4",
-      },
+        'text': '#e1ecf7',
+        'background': '#050d14',
+        'primary': '#92bae3',
+        'secondary': '#20257a',
+        'accent': '#6350d1',
+       },
       fontFamily: {
         heading: "Open Sans",
         body: "Rajdhani",
