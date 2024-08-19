@@ -6,7 +6,7 @@ import logo from '@/public/images/logo.png';
 const Navbar = () => {
   return (
     <div
-      className={`w-full px-8 h-20 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-10 fixed top-0 left-0 z-50`}
+      className={`w-full px-8 h-20 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-10 fixed top-0 left-0 z-50 md:flex hidden`}
     >
       <div className="h-full flex items-center justify-center">
         <Image src={logo} alt="Logo" className="w-fit h-12" />

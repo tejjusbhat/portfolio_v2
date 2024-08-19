@@ -29,17 +29,17 @@ const Experience = () => {
   const [selectedExperience, setSelectedExperience] = useState(0);
 
   return (
-    <div id="experience" className="w-full flex justify-center">
-      <div className="w-[84%] flex flex-col items-start mt-[10%]">
-        <span className="font-bold text-[2rem] tracking-wider text-primary mb-6">Experience</span>
+    <div id="experience" className="w-full flex justify-center px-4 md:px-0">
+      <div className="w-full md:w-[84%] flex flex-col items-start mt-[10%]">
+        <span className="font-bold text-[1.5rem] md:text-[2rem] tracking-wider text-primary mb-6">Experience</span>
 
-        <div className="w-full flex flex-row items-start">
-          <div className="w-1/5 flex flex-col space-y-4">
+        <div className="w-full flex flex-col md:flex-row items-start">
+          <div className="w-full md:w-1/5 flex flex-row md:flex-col space-y-0 md:space-y-4 mb-4 md:mb-0">
             {experiences.map((experience, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedExperience(index)}
-                className={`text-left text-[1.2rem] cursor-pointer transition-colors duration-200 ease-in-out ${
+                className={`text-left text-[1rem] md:text-[1.2rem] cursor-pointer transition-colors duration-200 ease-in-out w-full md:w-auto ${
                   selectedExperience === index
                     ? 'text-primary font-bold'
                     : 'text-text hover:text-primary'
@@ -50,17 +50,17 @@ const Experience = () => {
             ))}
           </div>
 
-          <div className="w-4/5 flex flex-col border-2 border-primary p-8 rounded-lg">
-            <h2 className="text-[1.5rem] font-bold text-primary mb-2">
+          <div className="w-full md:w-4/5 flex flex-col border-2 border-primary p-4 md:p-8 rounded-lg">
+            <h2 className="text-[1.25rem] md:text-[1.5rem] font-bold text-primary mb-2">
               {experiences[selectedExperience].title}
             </h2>
-            <h2 className="text-[1.3rem] font-bold text-text mb-4">
+            <h2 className="text-[1.1rem] md:text-[1.3rem] font-bold text-text mb-4">
               {"@" + experiences[selectedExperience].company}
             </h2>
-            <h3 className="text-[1.2rem] text-text mb-6">
+            <h3 className="text-[1rem] md:text-[1.2rem] text-text mb-6">
               {experiences[selectedExperience].period}
             </h3>
-            <ul className="list-disc list-inside text-[1.2rem] text-text leading-relaxed space-y-4">
+            <ul className="list-disc list-inside text-[1rem] md:text-[1.2rem] text-text leading-relaxed space-y-4">
               {experiences[selectedExperience].description.map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
