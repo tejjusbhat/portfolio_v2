@@ -38,3 +38,8 @@ body {
     scrollbar-width: none; /* Firefox */
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+

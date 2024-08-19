@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Scrolldown from "../Scrolldown"
 
 const Hero = () => {
   const [jobTitle, setJobTitle] = useState("AI developer")
@@ -38,13 +39,18 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-[85%] flex flex-col text-text leading-none gap-2 mt-[18%]">
+    <div id="home" className="w-full flex justify-center">
+      <div className="w-[85%] flex flex-col text-text leading-none mt-[18%]">
         <span className="font-normal text-s tracking-widest mb-2 text-primary">Hello, my name is</span>
         <span className="font-bold text-[4.5rem] tracking-wider text-text mb-3">Tejjus Bhat,</span>
         <span className="font-normal text-[3rem] tracking-wider">I'm {checkVowel(jobTitle.charAt(0)) ? "an" : "a"} <strong className="text-primary">{jobTitle}.</strong></span>
-        <span className="w-1/2 font-normal text-s mt-2 leading-snug">A curious cat who's always looking to have fun solving problems and learning new things. </span>
+        <span className="w-3/5 font-normal text-[1.2rem] mt-4 leading-snug">I'm a software engineer who loves to tinker. I have experience building AI models & APIs and developing full-stack web applications. I love to learn and work on new challenges.</span>
+        <a href="mailto:tejjusbhat@gmail.com">
+          <button className="border-[4px] border-primary text-[1.5rem] font-bold text-primary bg-transparent px-6 py-4 mt-32 w-[16rem] transform hover:translate-x-2 hover:scale-110 hover:text-text hover:border-text transition-transform duration-200">Let's Connect!</button>
+        </a>
       </div>
+
+      {/* <Scrolldown /> */}
     </div>
   )
 }
