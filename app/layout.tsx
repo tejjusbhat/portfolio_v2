@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Open_Sans, Rajdhani } from "next/font/google";
 import "./globals.css";
-import logo from "@/public/images/logo.png"; // Assuming the logo is stored in this path
 
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tejjus Bhat",
-  description: "Portfolio of Tejjus Bhat",
+  description: "Personal website of Tejjus Bhat - Software Engineer and AI Developer based in Delhi, India",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

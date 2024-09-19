@@ -8,21 +8,21 @@ const Projects = () => {
   const projects = [
     {
       title: 'Captcha Solver',
-      description: 'An automated system designed to solve captchas with high accuracy and speed using computer vision and machine learning techniques.',
+      description: 'It is exactly what the title is... it solves captchas using AI. Pretty cool, using robots to prove that you are not one.',
       technologies: ['Python', 'YOLO', 'OpenCV', 'Flask'],
       image: project1Image,
-      link: 'https://github.com/tejjusbhat/captcha_solver',
+      link: '/solve-captcha',
     },    
     {
       title: 'Secrets Web App',
-      description: 'A web application allowing users to register, login, and anonymously share secrets. Built using Node.js, Express.js, and MongoDB, it features secure user authentication via email or Google OAuth 2.0.',
+      description: 'This is an old project to show that even tho it looks like I have moved on to AI, I still am capable of doing full stack development.',
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'OAuth 2.0'],
       image: project2Image,
       link: 'https://github.com/tejjusbhat/secrets-project',
     },    
     {
       title: 'Chatbot Creation Suite',
-      description: 'Created a module using which we can create custom AI chatbots with natural language processing features. This project focused on enhancing user engagement by developing niche-specific functionalities and integrating document interaction capabilities.',
+      description: 'A module to allow platforms to create custom GPTs kinda like Poe or GPT store, once my client has it live I can add a link...',
       technologies: ['Python', 'Langchain', 'NLP', 'Web-Scraping'],
       image: project3Image,
       link: 'https://erengy.github.io/under-construction/',

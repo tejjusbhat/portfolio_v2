@@ -3,14 +3,24 @@ import React, { useState } from 'react';
 
 const experiences = [
   {
+    company: 'Adskom',
+    title: 'Data Science Intern',
+    period: 'Sept 2024 - Oct 2024',
+    description: [
+      'Created a program to automate data scraping from PDFs, Sheets, Text files increasing data collection speed by over 80%.',
+      'Worked in conjunction to the sales and operations team to ensure data accuracy and integrity.',
+      'Developed an interface to automate data collection using Firebase and Python, reducing manual data entry by 90%.',
+     ],
+  },  
+  {
     company: 'INMAS (DRDO)',
     title: 'Trainee Apprentice',
-    period: 'July 2024 - present',
+    period: 'July 2024 - Sept 2024',
     description: [
-      'Developing a VR CBRNe Drone Training Simulator to create immersive training scenarios, projected to reduce training costs by 12%.',
-      'Working with scientists and researchers to develop environments for drone modules and deliver timely reports and presentations.',
-      'Integrating data collection modules for collection of data for writing research papers and to contribute to ongoing research.',
-      'Adding eye-tracking technology to monitor user engagement and stress, supporting research into stress impacts on decision-making.',
+      'Developed a VR CBRNe Drone Training Simulator to create immersive training scenarios, projected to reduce training costs by 12%.',
+      'Worked with scientists and researchers to develop environments for drone modules and deliver timely reports and presentations.',
+      'Integrated data collection modules for collection of data for writing research papers and to contribute to ongoing research.',
+      'Added eye-tracking technology to monitor user engagement and stress, supporting research into stress impacts on decision-making.',
     ],
   },  
   {

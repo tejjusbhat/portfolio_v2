@@ -1,6 +1,6 @@
-import LeftSidebar from "./__components/LeftSidebar";
-import RightSidebar from "./__components/RightSidebar";
-import MiddleSection from "./__components/middleSection/MiddleSection";
+import LeftSidebar from "@/components/LeftSidebar";
+import RightSidebar from "@/components/RightSidebar";
+import MiddleSection from "@/components/middleSection/MiddleSection";
 
 export default function Home() {
   return (

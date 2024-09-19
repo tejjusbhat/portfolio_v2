@@ -11,17 +11,17 @@ const About = () => {
             About Me
           </span>
           <span className="font-normal text-[1rem] leading-relaxed">
-            I’m Tejjus Bhat, a software engineer and AI enthusiast who loves solving problems and taking on new challenges. I have a strong foundation in Python, JavaScript, and some basic knowledge of Rust, and I’ve worked on projects ranging from VR training simulators to AI-powered chatbots.
+            I am Tejjus Bhat, a software engineer and AI enthusiast who loves solving problems and taking on new challenges. I have a strong foundation in Python, JavaScript, and some basic knowledge of Rust, and I’ve worked on projects ranging from VR training simulators to AI-powered chatbots.
             <br /><br />
-            Currently, I’m gaining experience as a Trainee Apprentice at INMAS (DRDO), where I’m involved in developing VR-based training solutions. I’m always eager to learn and thrive in fast-paced environments where I can apply my logical mindset to solve real-world problems.
+            Currently, I am looking for internship opportunities with potential for full time employment in the field of AI/ML, Data Science, or Full Stack Development. I am open to learning new technologies and frameworks and I am always looking to improve my skills.
             <br /><br />
-            When I’m not coding, you can find me playing video games, watching anime, or reading manga. I love to listen to music of various genres.
+            When I am not coding, you can find me playing video games, watching anime, or reading manga. I love to listen to music of various genres.
             <br /><br />
             The following are my technical skills:
           </span>
 
           <ul className="list-disc text-[1rem] list-inside mt-4 space-y-3 leading-normal">
-            <li><strong>Languages:</strong> Python, JavaScript, Rust</li>
+            <li><strong>Languages:</strong> Python, JavaScript, C#, TypeScript, Rust</li>
             <li><strong>Concepts:</strong> AI/ML, Data Science, NLP, Generative AI, REST API, Git, Linux, CI/CD</li>
             <li><strong>Frameworks and Libraries:</strong> React.js, Next.js, Flask, Pytorch, OpenCV, Tensorflow</li>
             <li><strong>Databases:</strong> MySQL, MongoDB, Convex</li>
