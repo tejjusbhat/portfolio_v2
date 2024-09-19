@@ -10,6 +10,7 @@ const CaptchaSolver: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(true); // State to control modal visibility
   const [isLoading, setIsLoading] = useState<boolean>(false); // State to control loading status
+  const API_KEY = "1234567890";
 
   // Function to close the modal
   const closeModal = () => {
@@ -64,7 +65,7 @@ const CaptchaSolver: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://captcha-solver-api-529689135074.us-central1.run.app/process_image?api_key=1234567890",
+        `https://captcha-solver-api-529689135074.us-central1.run.app/process_image?api_key=${API_KEY}`,
         {
           method: "POST",
           body: formData,
@@ -128,8 +129,6 @@ const CaptchaSolver: React.FC = () => {
       >
         {isLoading ? "Processing..." : "Solve Captcha"}
       </button>
-
-      {isLoading && <p className="mt-4 text-lg text-primary">Loading...</p>}
     </div>
   );
 };
