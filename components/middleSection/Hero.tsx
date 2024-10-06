@@ -1,13 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
+import headshot from "../../public/images/headshot.svg"
 
 const Hero = () => {
-  const [jobTitle, setJobTitle] = useState("AI developer")
+  const [jobTitle, setJobTitle] = useState("ENGINEER")
 
   useEffect(() => {
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    const jobTitles = ["AI developer", "Data Scientist", "ML Engineer", "Full Stack Developer", "Computer Vision Dev", "Graphic Designer", "Video Editor"];
+    const jobTitles = ["ENGINEER", "DEVELOPER", "CREATOR", "INNOVATOR", "RESEARCHER"];
     let i = 0;
     let iterations = 0;
     setInterval(() => {
@@ -26,27 +28,47 @@ const Hero = () => {
     }, 4000)
   }, [])
 
-  const checkVowel = (x: String) => {
-    let result: boolean = false;
-    if (x == "A" || x == "E" || x == "I" || x == "O" || x == "U" || x == "M") {
-      result = true;
-    }
-    else {
-      result = false;
-    }
-    return result;
-  };
-
   return (
-    <div id="home" className="w-full flex justify-center px-4 md:px-0">
-      <div className="w-full md:w-[85%] flex flex-col text-text leading-none mt-[18%]">
-        <span className="font-normal text-xs md:text-sm tracking-widest mb-2 text-primary">Hello, my name is</span>
-        <span className="font-bold text-[2.5rem] md:text-[4.5rem] tracking-wider text-text mb-3">Tejjus Bhat,</span>
-        <span className="font-normal text-[1.75rem] md:text-[3rem] tracking-wider">I`m {checkVowel(jobTitle.charAt(0)) ? "an" : "a"} <strong className="text-primary">{jobTitle}.</strong></span>
-        <span className="w-full md:w-4/5 font-normal text-[1rem] md:text-[1.2rem] mt-4 leading-snug">I`m a software engineer who loves to tinker. I have experience building AI models, APIs and developing full-stack web applications. I love to learn and work on new challenges.</span>
-        <a href="mailto:tejjusbhat@gmail.com">
-          <button className="border-[3px] md:border-[4px] border-primary text-[1rem] md:text-[1.2rem] font-bold text-primary bg-transparent px-4 md:px-6 py-3 md:py-4 mt-16 md:mt-32 w-[12rem] md:w-[16rem] transform hover:translate-x-2 hover:scale-110 hover:text-text hover:border-text transition-transform duration-200">Contact Me 👉👈</button>
-        </a>
+    <div id="home" className="relative w-full h-screen px-4 md:px-0">
+      {/* Job Title Behind the Image */}
+      <div className="absolute inset-0 bottom-[40%] flex justify-center items-center z-0">
+        <span
+          className="font-bold text-[6rem] md:text-[10rem] tracking-wider text-text opacity-10"
+        >
+          {jobTitle}
+        </span>
+      </div>
+
+      {/* Image in Front of the Job Title */}
+      <div className="absolute bottom-0 left-[50%] transform translate-x-[-50%] flex justify-center items-center z-10">
+        <Image
+          src={headshot}
+          alt="Headshot"
+          width={600}
+          height={600}
+          className="w-[600px] h-[600px] object-contain"
+        />
+      </div>
+
+      {/* Text and Button in Front of the Image */}
+      <div className="relative flex w-full h-screen justify-between items-end pb-[10rem] z-20 px-32">
+        {/* Left Section with smaller text */}
+        <div className="w-1/3 flex flex-col text-text leading-none justify-center items-start">
+          <span className="font-normal text-[1rem] md:text-[2rem] tracking-widest mb-2 text-primary">I am</span>
+          <span className="font-bold text-[2rem] md:text-[3rem] tracking-wider text-text mb-3">Tejjus Bhat,</span>
+          <span className="w-full font-normal text-[1rem] mt-4 leading-snug">
+            I`m a software engineer who loves to tinker. I have experience building AI models, APIs, and developing full-stack web applications.
+          </span>
+        </div>
+
+        {/* Button on the right */}
+        <div className="w-1/3 flex justify-center items-center">
+          <a href="mailto:tejjusbhat@gmail.com">
+            <button className="border-[3px] md:border-[4px] border-primary text-[0.8rem] md:text-[1rem] font-bold text-primary bg-transparent px-4 md:px-6 py-3 md:py-4 transform hover:translate-x-2 hover:scale-110 hover:text-text hover:border-text transition-transform duration-200">
+              Click here to connect!!
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import headshot from '@/public/images/headshot.jpg';
+import headshot from '@/public/images/headshot.svg';
 
 const About = () => {
   return (

@@ -8,7 +8,7 @@ import Footer from "./Footer"
 
 export default function MiddleSection() {
   return (
-    <div className="h-full w-[84%] relative overflow-y-auto no-scrollbar flex flex-col gap-[10rem]">
+    <div className="relative overflow-y-auto no-scrollbar flex flex-col">
       <Navbar />
       <Hero />
       <About />
