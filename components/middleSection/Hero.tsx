@@ -57,7 +57,7 @@ const Hero = () => {
           <span className="font-normal text-[1.5rem] md:text-[2.5rem] tracking-widest mb-2 text-primary">I am</span>
           <span className="font-bold text-[2rem] md:text-[3.5rem] tracking-wider text-text mb-3">Tejjus Bhat,</span>
           <span className="w-full font-normal text-[1.5rem] mt-4 leading-snug">
-            I`m a software engineer who loves to tinker. I have experience building AI models, APIs, and developing full-stack web applications.
+            A software engineer who loves to tinker. I have experience building AI/ML models, APIs, and working with cloud technologies.
           </span>
         </div>
 

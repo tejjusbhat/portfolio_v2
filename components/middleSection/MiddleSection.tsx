@@ -12,7 +12,7 @@ export default function MiddleSection() {
       <Navbar />
       <Hero />
       <About />
-      <Experience />
+      {/* <Experience /> */}
       <Projects />
       <Contact />
       <Footer />
