@@ -16,13 +16,10 @@ const Navbar = () => {
           Home
         </a>
         <a href="#about" className="text-text font-bold hover:scale-105">
-          About
-        </a>
-        <a href="#experience" className="text-text font-bold hover:scale-105">
-          Experience
+          About Me
         </a>
         <a href="#projects" className="text-text font-bold hover:scale-105">
-          Projects
+          My Work
         </a>
         <a href="#contact" className="text-text font-bold hover:scale-105">
           Contact

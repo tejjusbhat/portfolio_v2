@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-background bg-opacity-50 z-50">
-      <div className="bg-background bg-opacity-80 border border-text p-8 rounded-lg text-center max-w-md relative">
+      <div className="bg-background bg-opacity-80 border border-text p-8 rounded-lg text-text text-center max-w-md relative">
         <h2 className="text-2xl font-bold mb-4">Note: Test API in Use</h2>
         <p className="text-lg mb-4">
           This is a test API, and it only works on grid-based captchas. Like the one below...
