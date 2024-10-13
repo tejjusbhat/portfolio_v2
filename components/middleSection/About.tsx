@@ -1,40 +1,81 @@
-import React from 'react';
 import Image from 'next/image';
-import headshot from '@/public/images/headshot.jpg';
+import image1 from '@/public/images/about1.jpg';
+import image2 from '@/public/images/about2.jpg';
+import image3 from '@/public/images/about3.jpeg';
+
+// Define the JSON data directly within the file
+const aboutData = {
+  sections: [
+    {
+      title: "Passionate Coder & Problem Solver",
+      content: [
+        "I love to code and create solutions. My primary focus is on building AI/ML models and designing APIs that integrate seamlessly with cloud technologies.",
+        "Competitive by nature, I'm constantly pushing myself to learn more and refine my skills. I enjoy the challenge of solving complex problems and delivering effective, scalable solutions."
+      ],
+      image: image1,
+      side: "left"
+    },
+    {
+      title: "Career Aspirations",
+      content: [
+        "Currently, I am looking for internship opportunities with the potential for full-time employment, particularly in the fields of AI/ML, Data Science, or Backend Development.",
+        "I'm always eager to learn new technologies and improve my technical capabilities, aiming to make a meaningful impact through my work."
+      ],
+      image: image2,
+      side: "right"
+    },
+    {
+      title: "Anime, Gaming & Beyond",
+      content: [
+        "When I'm not coding, you'll find me immersed in the world of anime and video games. My favorite anime is Violet Evergarden, and I also enjoy exploring new games that challenge and inspire me.",
+        "I love diving into various hobbies that fuel my creativity and curiosity, whether it's doing yoga, learning to juggle, playing the guitar. Chances are if you tell me something I haven't yet tried, I will be trying it soon after."
+      ],
+      image: image3,
+      side: "left"
+    }
+  ]
+};
+
 
 const About = () => {
   return (
-    <div id="about" className="w-full flex justify-center px-4 md:px-0">
-      <div className="w-full md:w-[84%] flex flex-col md:flex-row items-center mt-[10%] relative">
-        <div className="flex flex-col text-text leading-none md:w-3/5 w-full mb-8 md:mb-0">
-          <span className="font-bold text-[1.5rem] md:text-[2rem] tracking-wider text-primary mb-6">
-            About Me
-          </span>
-          <span className="font-normal text-[1rem] leading-relaxed">
-            I am Tejjus Bhat, a software engineer and AI enthusiast who loves solving problems and taking on new challenges. I have a strong foundation in Python, JavaScript, and some basic knowledge of Rust, and I’ve worked on projects ranging from VR training simulators to AI-powered chatbots.
-            <br /><br />
-            Currently, I am looking for internship opportunities with potential for full time employment in the field of AI/ML, Data Science, or Full Stack Development. I am open to learning new technologies and frameworks and I am always looking to improve my skills.
-            <br /><br />
-            When I am not coding, you can find me playing video games, watching anime, or reading manga. I love to listen to music of various genres.
-            <br /><br />
-            The following are my technical skills:
-          </span>
+    <div id="about" className="w-full flex justify-center relative">
+      <div className="w-full px-[10%] flex flex-col text-text leading-none">
+        {/* Rectangle Background */}
+        <div className="absolute z-10 h-24 md:h-32 bg-secondary w-full left-0 top-[-10px]" />
 
-          <ul className="list-disc text-[1rem] list-inside mt-4 space-y-3 leading-normal">
-            <li><strong>Languages:</strong> Python, JavaScript, C#, TypeScript, Rust</li>
-            <li><strong>Concepts:</strong> AI/ML, Data Science, NLP, Generative AI, REST API, Git, Linux, CI/CD</li>
-            <li><strong>Frameworks and Libraries:</strong> React.js, Next.js, Flask, Pytorch, OpenCV, Tensorflow</li>
-            <li><strong>Databases:</strong> MySQL, MongoDB, Convex</li>
-            <li><strong>Software:</strong> Unity, Photoshop, After Effects</li>
-          </ul>
-        </div>
-        <div className="md:w-2/5 w-full flex justify-center z-50">
-          <Image
-            src={headshot}
-            alt="Placeholder Headshot"
-            className="w-full md:w-3/4 object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-300 ease-in-out"
-          />
-        </div>
+        {/* Title */}
+        <span className="relative font-bold text-[2rem] md:text-[3rem] tracking-wider text-white mt-8 mb-24 z-20">
+          About Me
+        </span>
+        <br />
+        <br />
+
+        {aboutData.sections.map((section, index) => (
+          <div
+            key={index}
+            className={`w-full flex flex-col justify-between md:flex-row items-center mb-32 ${section.side === 'right' ? 'md:flex-row-reverse' : ''}`}
+          >
+            {/* Content */}
+            <div className="md:w-[45%] text-text text-[1.1rem] md:text-[1.2rem] leading-relaxed">
+              <h3 className="text-[1.5rem] font-bold mb-4">{section.title}</h3>
+              {section.content.map((paragraph, i) => (
+                <p key={i} className="mb-4">{paragraph}</p>
+              ))}
+            </div>
+
+            {/* Image */}
+            <div className="md:w-[45%] flex justify-center items-center overflow-hidden max-h-[350px]">
+              <Image
+                src={section.image}
+                alt={section.title}
+                width={600}
+                height={600}
+                className="object-cover"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

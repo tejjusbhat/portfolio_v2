@@ -2,7 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import project1Image from '@/public/images/project1.png'
 import project2Image from '@/public/images/project2.png'
-import project3Image from '@/public/images/project3.webp'
+import project3Image from '@/public/images/project3.png'
+import project4Image from '@/public/images/project4.png'
+import project5Image from '@/public/images/project5.webp'
 
 const Projects = () => {
   const projects = [
@@ -12,67 +14,70 @@ const Projects = () => {
       technologies: ['Python', 'YOLO', 'OpenCV', 'Flask'],
       image: project1Image,
       link: '/solve-captcha',
-    },    
+    },
+    {
+      title: 'Diamond Price Predictor',
+      description: 'A machine learning model that predicts the price of diamonds, implements ensemble learning, hyperparameter optimization and pipelining.',
+      technologies: ['Scikit-learn', 'Pandas', 'ML', 'Python'],
+      image: project2Image,
+      link: 'https://github.com/tejjusbhat/diamond_price_prediction',
+    },
+    {
+      title: 'Ivy- An Emotional AI Assistant',
+      description: 'It is a work in progress voice assistant that talks to you as if its a human, it can detect your emotions and respond accordingly.',
+      technologies: ['Python', 'Langchain', 'NLP', 'GCP'],
+      image: project3Image,
+      link: 'https://github.com/tejjusbhat/Ivy-emotion-detector',
+    },
     {
       title: 'Secrets Web App',
       description: 'This is an old project to show that even tho it looks like I have moved on to AI, I still am capable of doing full stack development.',
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'OAuth 2.0'],
-      image: project2Image,
+      image: project4Image,
       link: 'https://github.com/tejjusbhat/secrets-project',
-    },    
+    },
     {
-      title: 'Chatbot Creation Suite',
-      description: 'A module to allow platforms to create custom GPTs kinda like Poe or GPT store, once my client has it live I can add a link...',
-      technologies: ['Python', 'Langchain', 'NLP', 'Web-Scraping'],
-      image: project3Image,
-      link: 'https://erengy.github.io/under-construction/',
-    },    
+      title: 'Stock Investment Assistant',
+      description: 'An API that scrapes the web for latest news on stocks and gives you a sentiment analysis of the news to help you make better investment decisions.',
+      technologies: ['NLP', 'Langchain', 'Python', 'Web-Scraping'],
+      image: project5Image,
+      link: 'https://github.com/tejjusbhat/stock_invest_assistant',
+    },
   ]
 
   return (
-    <div id="projects" className="w-full flex justify-center px-4 md:px-0">
-      <div className="w-full md:w-[84%] flex flex-col items-center mt-[10%]">
-        <span className="font-bold text-[1.5rem] md:text-[2rem] tracking-wider text-primary mb-12">Projects</span>
-        <div className="flex flex-col gap-16 md:gap-32">
+    <div id="projects" className="w-full flex justify-center relative">
+      <div className="w-full px-[10%] flex flex-col text-text leading-none">
+        {/* Rectangle Background */}
+        <div className="absolute z-10 h-24 md:h-32 bg-secondary w-full left-0 top-[-10px]" />
+
+        {/* Title */}
+        <span className="relative font-bold text-[2rem] md:text-[3rem] tracking-wider text-white mt-8 mb-24 z-20">
+          My Work
+        </span>
+
+        {/* Projects Grid */}
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 z-20">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'} group`}
-            >
-              <div className="w-full md:w-[70%] mb-6 md:mb-0 relative z-0 grayscale hover:grayscale-0 hover:scale-105 transition duration-300 ease-in-out">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block relative"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black opacity-20"></div>
-                </a>
-              </div>
-              <div className={`w-full md:w-[50%] flex flex-col ${index % 2 !== 0 ? 'md:items-start md:ml-8' : 'md:items-end md:mr-8'} z-10`}>
-                <span className="font-bold text-[1.3rem] md:text-[1.7rem] text-text mb-4">{project.title}</span>
-                <div className={`bg-secondary p-4 md:p-6 text-text ${index % 2 !== 0 ? "text-left" : "text-right"}`}>
-                  <span className={`font-normal text-[1rem] md:text-[1.2rem] leading-relaxed ${index % 2 !== 0 ? "mr-0 md:mr-12" : "ml-0 md:ml-12"}`}>
-                    {project.description}
-                  </span>
-                </div>
-                <ul className="list-none flex gap-3 flex-wrap mt-4 text-[1rem] md:text-[1.2rem]">
-                  {project.technologies.map((tech, i) => (
-                    <li key={i} className={`${index % 2 === 0 ? 'text-left' : 'text-right'}`}>{tech}</li>
+            <a key={index} href={project.link} target="_blank" rel="noopener noreferrer">
+              <div className="bg-primary p-4 rounded-lg shadow-md flex flex-col items-center">
+                <Image src={project.image} alt={project.title} className="w-full h-auto max-h-[200px] rounded-md" />
+                <h3 className="font-semibold text-lg mt-4 text-center">{project.title}</h3>
+                <p className="text-sm mt-2 text-center">{project.description}</p>
+                <div className="flex gap-2 mt-4 flex-wrap justify-center">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-secondary text-white text-xs py-1 px-2 rounded-full">
+                      {tech}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
     </div>
-  )   
+  )
 }
 
 export default Projects
